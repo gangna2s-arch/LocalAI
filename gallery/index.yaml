@@ -16170,6 +16170,8 @@
         - private_key_block
 - name: lfm2.5-24b-a2b
   variants:
+    - model: lfm2.5-24b-a2b-ud-q4
+    - model: lfm2.5-24b-a2b-ud-q6
     - model: lfm2.5-24b-a2b-q5
     - model: lfm2.5-24b-a2b-q6
     - model: lfm2.5-24b-a2b-q8
@@ -16212,6 +16214,86 @@
     - filename: llama-cpp/models/LFM2.5-24B-A2B-GGUF/LFM2.5-24B-A2B-Q4_K_M.gguf
       uri: https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-GGUF/resolve/f97fc8a443da86c71818adf91baecde5b7ef4c50/LFM2.5-24B-A2B-Q4_K_M.gguf
       sha256: d3334405b96228eb9908cdebb5c6194908f2da64282bda852afc3a3910c64e7d
+- name: lfm2.5-24b-a2b-ud-q4
+  url: github:mudler/LocalAI/gallery/virtual.yaml@master
+  urls:
+    - https://huggingface.co/LiquidAI/LFM2.5-24B-A2B
+    - https://huggingface.co/unsloth/LFM2.5-24B-A2B-GGUF
+  description: |
+    LiquidAI LFM2.5-24B-A2B is a text-only reasoning model with 24B total
+    parameters and 2.45B active parameters for multilingual chat and tool use.
+    This entry uses Unsloth's dynamic UD-Q4_K_XL GGUF quantization.
+  license: other
+  tags:
+    - llm
+    - gguf
+    - reasoning
+    - cpu
+    - gpu
+  icon: https://cdn-uploads.huggingface.co/production/uploads/61b8e2ba285851687028d395/2b08LKpev0DNEk6DlnWkY.png
+  overrides:
+    backend: llama-cpp
+    context_size: 131072
+    function:
+      automatic_tool_parsing_fallback: true
+      grammar:
+        disable: true
+    known_usecases:
+      - chat
+      - completion
+    options:
+      - use_jinja:true
+    parameters:
+      model: llama-cpp/models/unsloth/LFM2.5-24B-A2B-GGUF/LFM2.5-24B-A2B-UD-Q4_K_XL.gguf
+      temperature: 0.1
+      top_k: 50
+      repeat_penalty: 1.05
+    template:
+      use_tokenizer_template: true
+  files:
+    - filename: llama-cpp/models/unsloth/LFM2.5-24B-A2B-GGUF/LFM2.5-24B-A2B-UD-Q4_K_XL.gguf
+      uri: https://huggingface.co/unsloth/LFM2.5-24B-A2B-GGUF/resolve/faa77113e93335b63423e9e8d33395f86eaf8946/LFM2.5-24B-A2B-UD-Q4_K_XL.gguf
+      sha256: a235d23638cc5549cb1ff61da7522c8a7e97f056f27093462a1e56f35aba91d8
+- name: lfm2.5-24b-a2b-ud-q6
+  url: github:mudler/LocalAI/gallery/virtual.yaml@master
+  urls:
+    - https://huggingface.co/LiquidAI/LFM2.5-24B-A2B
+    - https://huggingface.co/unsloth/LFM2.5-24B-A2B-GGUF
+  description: |
+    LiquidAI LFM2.5-24B-A2B is a text-only reasoning model with 24B total
+    parameters and 2.45B active parameters for multilingual chat and tool use.
+    This entry uses Unsloth's dynamic UD-Q6_K_XL GGUF quantization.
+  license: other
+  tags:
+    - llm
+    - gguf
+    - reasoning
+    - cpu
+    - gpu
+  icon: https://cdn-uploads.huggingface.co/production/uploads/61b8e2ba285851687028d395/2b08LKpev0DNEk6DlnWkY.png
+  overrides:
+    backend: llama-cpp
+    context_size: 131072
+    function:
+      automatic_tool_parsing_fallback: true
+      grammar:
+        disable: true
+    known_usecases:
+      - chat
+      - completion
+    options:
+      - use_jinja:true
+    parameters:
+      model: llama-cpp/models/unsloth/LFM2.5-24B-A2B-GGUF/LFM2.5-24B-A2B-UD-Q6_K_XL.gguf
+      temperature: 0.1
+      top_k: 50
+      repeat_penalty: 1.05
+    template:
+      use_tokenizer_template: true
+  files:
+    - filename: llama-cpp/models/unsloth/LFM2.5-24B-A2B-GGUF/LFM2.5-24B-A2B-UD-Q6_K_XL.gguf
+      uri: https://huggingface.co/unsloth/LFM2.5-24B-A2B-GGUF/resolve/faa77113e93335b63423e9e8d33395f86eaf8946/LFM2.5-24B-A2B-UD-Q6_K_XL.gguf
+      sha256: abcb7e21e006eb4c826a2b75fb91c0804db7b20f908a61beeebdbdd07c88f41d
 - name: lfm2.5-24b-a2b-q5
   url: github:mudler/LocalAI/gallery/virtual.yaml@master
   urls:
