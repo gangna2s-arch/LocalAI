@@ -74305,6 +74305,7 @@
     - model: humanizer-12b-q3-qat
     - model: humanizer-12b-q6
     - model: humanizer-12b-q8
+    - model: humanizer-12b-bf16
   overrides:
     backend: llama-cpp
     context_size: 8192
@@ -74413,6 +74414,48 @@
     - filename: humanizer-12b-Q8_0.gguf
       uri: https://huggingface.co/jialinyyzz/humanizer/resolve/4845f89d6750e5baac7baa644a7ffedc3a86b969/humanizer-12b-Q8_0.gguf
       sha256: 8d7a457b56de6530eaaf0151ccfa7550a4b20dab979737e259da9c63e960e0b0
+- name: humanizer-12b-bf16
+  url: github:mudler/LocalAI/gallery/virtual.yaml@master
+  urls:
+    - https://huggingface.co/google/gemma-4-12B
+    - https://huggingface.co/jialinyyzz/humanizer
+  license: apache-2.0
+  description: |
+    Humanizer is a 12B Gemma 4 fine-tune for rewriting English and Chinese text.
+    This unquantized BF16 GGUF build uses llama.cpp with an 8,192-token context.
+    This entry uses the completions API with the publisher's exact rewriting prompt.
+  tags:
+    - llm
+    - gguf
+    - cpu
+    - gpu
+    - text-generation
+    - rewriting
+    - gemma
+  overrides:
+    backend: llama-cpp
+    context_size: 8192
+    known_usecases:
+      - completion
+    known_input_modalities:
+      - text
+    options:
+      - use_jinja:false
+    stopwords: []
+    template:
+      completion: '{{.Input}}'
+    parameters:
+      model: humanizer-12b-bf16.gguf
+      temperature: 1.0
+      top_p: 0.95
+      top_k: 0
+      min_p: 0
+      repeat_penalty: 1.0
+    mmap: true
+  files:
+    - filename: humanizer-12b-bf16.gguf
+      uri: https://huggingface.co/jialinyyzz/humanizer/resolve/2e57b6528a4070c33f3e09ca24e3325a84272f68/humanizer-12b-bf16.gguf
+      sha256: 47d79b44c3e15ea2540f4edb63556f2b7e456067d7dd252a42ff103a26a51be9
 - name: humanizer-12b-iq2-qat
   url: github:mudler/LocalAI/gallery/virtual.yaml@master
   urls:
