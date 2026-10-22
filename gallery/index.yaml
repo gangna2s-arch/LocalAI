@@ -7276,6 +7276,87 @@
     - filename: llama-cpp/models/spark-x2.5-4b-heretic-jp/Spark-X2.5-4B-Heretic-jp-Q8_0.gguf
       uri: https://huggingface.co/soyaakinohara/Spark-X2.5-4B-Heretic-jp-gguf/resolve/f01809e437fb3046ae9afd31d684556f9ae5dd46/Spark-X2.5-4B-Heretic-jp-Q8_0.gguf
       sha256: ad25031816957ee29ff1b4c7f735f7ba785c345cd6d3f404a581110c228eb81a
+- name: spark-x2.6-4b-q4
+  url: github:mudler/LocalAI/gallery/virtual.yaml@master
+  variants:
+    - model: spark-x2.6-4b-q8
+  urls:
+    - https://huggingface.co/XHToken/Spark-X2.6-4B
+    - https://huggingface.co/XHToken/Spark-X2.6-4B-GGUF
+  description: |
+    Spark-X2.6-4B is XHToken's 4B text model for conversation, reasoning,
+    coding, and multilingual tasks. This build uses Q4_K_M GGUF weights,
+    the embedded Jinja chat template, and a 32K-token default context.
+  license: apache-2.0
+  tags:
+    - llm
+    - gguf
+    - cpu
+    - gpu
+    - reasoning
+    - coding
+    - multilingual
+  last_checked: "2026-10-22"
+  overrides:
+    backend: llama-cpp
+    context_size: 32768
+    known_usecases:
+      - chat
+    options:
+      - use_jinja:true
+    parameters:
+      model: llama-cpp/models/spark-x2.6-4b/Spark-X2.6-4B-Q4_K_M.gguf
+      temperature: 1
+      top_p: 0.95
+      top_k: -1
+      min_p: 0
+      repeat_penalty: 1
+    template:
+      use_tokenizer_template: true
+  files:
+    - filename: llama-cpp/models/spark-x2.6-4b/Spark-X2.6-4B-Q4_K_M.gguf
+      uri: https://huggingface.co/XHToken/Spark-X2.6-4B-GGUF/resolve/fe31f8d64890302cc3a1d365d700357b4b75ba77/Spark-X2.6-4B-Q4_K_M.gguf
+      sha256: 91cb2811aebb47ac916aa619d27d4cdd7f4143106b7917accb8ead4cd7f5cbd9
+- name: spark-x2.6-4b-q8
+  url: github:mudler/LocalAI/gallery/virtual.yaml@master
+  urls:
+    - https://huggingface.co/XHToken/Spark-X2.6-4B
+    - https://huggingface.co/XHToken/Spark-X2.6-4B-GGUF
+  description: |
+    Spark-X2.6-4B is XHToken's 4B text model for conversation, reasoning,
+    coding, and multilingual tasks. This build uses Q8_0 GGUF weights,
+    the embedded Jinja chat template, and a 32K-token default context.
+  license: apache-2.0
+  tags:
+    - llm
+    - gguf
+    - cpu
+    - gpu
+    - reasoning
+    - coding
+    - multilingual
+  last_checked: "2026-10-22"
+  overrides:
+    backend: llama-cpp
+    context_size: 32768
+    known_usecases:
+      - chat
+    options:
+      - use_jinja:true
+    parameters:
+      model: llama-cpp/models/spark-x2.6-4b/Spark-X2.6-4B-Q8_0.gguf
+      temperature: 1
+      top_p: 0.95
+      top_k: -1
+      min_p: 0
+      repeat_penalty: 1
+    template:
+      use_tokenizer_template: true
+  files:
+    - filename: llama-cpp/models/spark-x2.6-4b/Spark-X2.6-4B-Q8_0.gguf
+      uri: https://huggingface.co/XHToken/Spark-X2.6-4B-GGUF/resolve/fe31f8d64890302cc3a1d365d700357b4b75ba77/Spark-X2.6-4B-Q8_0.gguf
+      sha256: 145c2aa606820663f26ad530b8fc141ed885e2e9ca29f9be7c3bfe8931d58b81
+
 - &spark-x2-5-1-7b
   name: spark-x2.5-1.7b-q4
   url: github:mudler/LocalAI/gallery/virtual.yaml@master
