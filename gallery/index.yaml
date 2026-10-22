@@ -3734,7 +3734,7 @@
       uri: huggingface://JonathanColetti/Qwen3.8-27B-Uncensored-GGUF/Qwen3.8-27B-Uncensored-Q4_K_M.gguf
       sha256: 4c5e2db039e9325ac7724c8846c71356a24ad1cdfa28002d73ecb6be645f9675
     - filename: llama-cpp/mmproj/qwen3.8-27b-uncensored/vision-f16.gguf
-      uri: huggingface://JonathanColetti/Qwen3.8-27B-Uncensored-GGUF/Qwen3.8-27B-Uncensored-vision-f16.gguf
+      uri: huggingface://JonathanColetti/Qwen3.8-27B-Uncensored-GGUF/mmproj-Qwen3.8-27B-Uncensored-F16.gguf
       sha256: 5ac423f8a29059dc24e51bc6a43e9380dcd57a9347f28b62591e0b3f60b7081c
 - !!merge <<: *qwen3-8-27b-uncensored
   name: qwen3.8-27b-uncensored-q8
@@ -3771,7 +3771,7 @@
       uri: huggingface://JonathanColetti/Qwen3.8-27B-Uncensored-GGUF/Qwen3.8-27B-Uncensored-Q8_0.gguf
       sha256: fb2cb9aa5407264aec6698faf41183f337809352abe0bd8fb750c0b689f4ced2
     - filename: llama-cpp/mmproj/qwen3.8-27b-uncensored/vision-f16.gguf
-      uri: huggingface://JonathanColetti/Qwen3.8-27B-Uncensored-GGUF/Qwen3.8-27B-Uncensored-vision-f16.gguf
+      uri: huggingface://JonathanColetti/Qwen3.8-27B-Uncensored-GGUF/mmproj-Qwen3.8-27B-Uncensored-F16.gguf
       sha256: 5ac423f8a29059dc24e51bc6a43e9380dcd57a9347f28b62591e0b3f60b7081c
 - &huihui-qwen3-8-27b
   name: huihui-qwen3.8-27b-abliterated
